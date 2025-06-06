@@ -1,0 +1,292 @@
+/* PROFESSIONELLE FORMULAR-SUITE */
+
+/* Modal Grundstyles - WICHTIG: Sichtbarkeit */
+.modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px) !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #1E537C 0%, #2a6bb5 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+.modal-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 5px 0 0 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1E537C;
+    font-size: 0.95rem;
+}
+
+.form-label.required::after {
+    content: "*";
+    color: #e74c3c;
+    margin-left: 3px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #F9B233;
+    box-shadow: 0 0 0 3px rgba(249, 178, 51, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.form-checkbox-item:hover {
+    background: #f8f9fa;
+}
+
+.form-checkbox {
+    margin-right: 8px;
+    accent-color: #F9B233;
+}
+
+.form-checkbox-label {
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* DSGVO Checkbox */
+.dsgvo-group {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.dsgvo-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.dsgvo-text {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.dsgvo-text a {
+    color: #1E537C;
+    text-decoration: none;
+}
+
+.dsgvo-text a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #F9B233 0%, #e6a02e 100%);
+    color: #1E537C;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(249, 178, 51, 0.3);
+}
+
+.form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Success/Error Messages */
+.form-message {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .modal-container {
+        margin: 10px;
+        max-height: 95vh;
+    }
+    
+    .modal-header {
+        padding: 20px;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-title {
+        font-size: 1.3rem;
+    }
+    
+    .form-checkbox-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading State */
+.form-loading {
+    position: relative;
+}
+
+.form-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #F9B233;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

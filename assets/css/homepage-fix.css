@@ -1,0 +1,36 @@
+/* STARTSEITE - SERVICE CARDS WEISS LASSEN */
+.homepage .service-card,
+.homepage .service-card:hover,
+.homepage .service-card:focus,
+.homepage .service-card:active {
+    background: white !important;
+    background-color: white !important;
+    color: #333 !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.homepage .service-card h4 {
+    color: #1E537C !important;
+    background: transparent !important;
+}
+
+.homepage .service-card p {
+    color: #666 !important;
+    background: transparent !important;
+}
+
+.homepage .service-card li {
+    color: #666 !important;
+    background: transparent !important;
+}
+
+.homepage .service-card__link {
+    background: #1E537C !important;
+    color: white !important;
+}
+
+.homepage .service-card__link:hover {
+    background: #F9B233 !important;
+    color: #1E537C !important;
+}

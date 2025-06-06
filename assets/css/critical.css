@@ -1,0 +1,43 @@
+/* Critical CSS for above-the-fold content */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8fafc;
+}
+
+.header {
+    background: linear-gradient(135deg, #1E537C 0%, #2563eb 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero {
+    background: linear-gradient(135deg, #1E537C 0%, #2563eb 100%);
+    color: white;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+}
+
+.hero__highlight {
+    color: #F9B233;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}

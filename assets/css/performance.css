@@ -1,0 +1,33 @@
+/* Performance Optimierungen */
+
+/* Lazy Loading für Bilder */
+img {
+    loading: lazy;
+}
+
+/* Kritisches CSS inline halten */
+.hero {
+    will-change: transform;
+}
+
+/* GPU-Beschleunigung für Animationen */
+.hero__badge, .service-card, .cta-button {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Reduzierte Animationen für bessere Performance */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Optimierte Schrift-Rendering */
+body {
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

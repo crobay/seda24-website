@@ -1,0 +1,94 @@
+/* High-Quality Image Rendering for SEDA24 */
+
+/* Sharp Font Rendering */
+body, * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1, "kern" 1;
+}
+
+/* Banner specific sharp rendering */
+#rabatt-banner, #rabatt-banner * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Global image optimization */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    filter: contrast(1.05) brightness(1.02) saturate(1.1);
+    transition: none;
+}
+
+/* High-resolution display optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: auto;
+        filter: contrast(1.08) brightness(1.03) saturate(1.15);
+    }
+}
+
+/* Hero images specific optimization */
+.hero__image img,
+.team-photo-direct,
+.hero-image-enhanced img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    image-rendering: auto;
+    filter: contrast(1.1) brightness(1.05) saturate(1.2);
+}
+
+/* Service page images */
+.section-image-block img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    image-rendering: auto;
+    filter: contrast(1.08) brightness(1.03) saturate(1.15);
+}
+
+/* Team images */
+.team-image img,
+.content-image img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    image-rendering: auto;
+    filter: contrast(1.06) brightness(1.02) saturate(1.1);
+}
+
+/* Disable lazy loading blur effects */
+img[loading="lazy"] {
+    opacity: 1;
+    transition: none;
+}
+
+/* Prevent image compression artifacts */
+img {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    -webkit-filter-anti-alias: none;
+    filter-anti-alias: none;
+}
