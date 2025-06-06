@@ -1,0 +1,90 @@
+<!-- Header -->
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <!-- Logo -->
+            <div class="navbar__logo">
+                <a href="/index.html">
+                    <img
+                        src="https://seda24.eu/wp-content/uploads/2025/05/Logo_wei__SVG.svg"
+                        alt="SEDA24 Logo"
+                        class="navbar__logo-img"
+                    />
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__link">Start</a>
+                </li>
+                <li class="navbar__item dropdown">
+                    <a href="/index.html#services" class="navbar__link dropdown-toggle">Leistungen</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gewerbliche-reinigung.html">Gewerbliche Reinigung</a></li>
+                        <li><a href="private-reinigung.html">Private Reinigung</a></li>
+                        <li><a href="leistungen.html">Alle Leistungen</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item">
+                    <a href="/ueber-uns.html" class="navbar__link">Über uns</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/kontakt.html" class="navbar__link">Kontakt</a>
+                </li>
+            </ul>
+
+            <!-- Contact Info (Desktop only) -->
+            <div class="navbar__contact">
+                <a href="rabatt.html" class="navbar__discount navbar__discount--prominent">22% Rabatt sichern!</a>
+                <a href="tel:+4972251804970" class="navbar__phone">
+                    <i class="fas fa-phone"></i>
+                    07225 / 180 49 70
+                </a>
+            </div>
+
+            <!-- Mobile Discount Button & Menu Toggle -->
+            <div class="mobile-header-controls">
+                <a href="rabatt.html" class="mobile-discount-btn">22% Rabatt sichern!</a>
+                <div class="hamburger" onclick="document.getElementById('mobilemenu').style.right='0px'">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobilemenu" style="position:fixed;top:0;right:-100%;width:280px;height:100vh;background:rgba(30,83,124,0.95);z-index:9999;padding:80px 30px;transition:right 0.3s;">
+            <div onclick="document.getElementById('mobilemenu').style.right='-100%'" style="position:absolute;top:20px;right:20px;color:white;font-size:30px;cursor:pointer;">&times;</div>
+            <a href="/index.html" style="display:block;color:white;padding:15px 0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.1);" onclick="document.getElementById('mobilemenu').style.right='-100%'">Start</a>
+            
+            <!-- Leistungen Dropdown -->
+            <div style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                <div onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'; this.querySelector('span').style.transform = this.nextElementSibling.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0deg)';" style="display:block;color:white;padding:15px 0;text-decoration:none;cursor:pointer;position:relative;">
+                    Leistungen 
+                    <span style="float:right;transition:transform 0.3s;">▼</span>
+                </div>
+                <div style="display:none;padding-left:20px;">
+                    <a href="/gewerbliche-reinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;font-weight:600;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Gewerbliche Reinigung</a>
+                    <a href="/private-reinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;font-weight:600;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Private Reinigung</a>
+                    <hr style="border:none;border-top:1px solid rgba(249,178,51,0.3);margin:8px 0;">
+                    <a href="/leistungen/gewerblich/bueroreinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Büroreinigung</a>
+                    <a href="/leistungen/gewerblich/unterhaltsreinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Unterhaltsreinigung</a>
+                    <a href="/leistungen/gewerblich/glasreinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Glasreinigung Gewerbe</a>
+                    <a href="/leistungen/privat/fensterreinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Fensterreinigung Privat</a>
+                    <a href="/leistungen/privat/haushaltsreinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Haushaltsreinigung</a>
+                    <a href="/leistungen/privat/treppenhausreinigung.html" style="display:block;color:#F9B233;padding:8px 0;text-decoration:none;font-size:14px;" onclick="document.getElementById('mobilemenu').style.right='-100%'">Treppenhausreinigung</a>
+                </div>
+            </div>
+            
+            <a href="/ueber-uns.html" style="display:block;color:white;padding:15px 0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.1);" onclick="document.getElementById('mobilemenu').style.right='-100%'">Über uns</a>
+            <a href="/kontakt.html" style="display:block;color:white;padding:15px 0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.1);" onclick="document.getElementById('mobilemenu').style.right='-100%'">Kontakt</a>
+            <a href="/#rabatt-angebot-section" style="display:block;color:#F9B233;padding:15px 0;text-decoration:none;font-weight:600;background:rgba(249,178,51,0.1);border-radius:5px;margin:10px 0;" onclick="document.getElementById('mobilemenu').style.right='-100%'; setTimeout(() => document.getElementById('rabatt-angebot-section').scrollIntoView({behavior: 'smooth'}), 200)">🎯 22% Rabatt</a>
+            <a href="tel:+4972251804970" style="display:block;color:#F9B233;padding:15px 0;text-decoration:none;font-weight:600;" onclick="document.getElementById('mobilemenu').style.right='-100%'">📞 07225 / 180 49 70</a>
+        </div>
+
+
+
+
+    </nav>
+</header>

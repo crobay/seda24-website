@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite nicht gefunden - SEDA24 Reinigungsservice</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1E537C 0%, #2e6fa0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px 20px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #F9B233;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        .back-button {
+            background: #F9B233;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(249, 178, 51, 0.3);
+        }
+        .contact-info {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        .contact-link {
+            color: #F9B233;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .error-code { font-size: 6rem; }
+            .error-title { font-size: 2rem; }
+            .error-message { font-size: 1.1rem; }
+            .error-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Seite nicht gefunden</h1>
+        <p class="error-message">
+            Die von Ihnen gesuchte Seite konnte leider nicht gefunden werden.<br>
+            Möglicherweise wurde sie verschoben oder der Link ist veraltet.
+        </p>
+        <a href="/" class="back-button">Zur Startseite</a>
+        
+        <div class="contact-info">
+            <p>Benötigen Sie Hilfe? Kontaktieren Sie uns:</p>
+            <p>
+                <a href="tel:+4972251804970" class="contact-link">07225 / 180 49 70</a> |
+                <a href="mailto:mail@seda24.de" class="contact-link">mail@seda24.de</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

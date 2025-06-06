@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Datenschutz bei Seda24 – Ihre Daten sind sicher | SEDA24</title>
+        <meta
+            name="description"
+            content="Datenschutzerklärung von SEDA24 Reinigungsservice - DSGVO-konform und transparent. Erfahren Sie, wie wir Ihre persönlichen Daten schützen und verarbeiten."
+        />
+        <meta name="keywords" content="Datenschutz, DSGVO, SEDA24, Reinigungsservice, Gaggenau" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <!-- DSGVO-konforme System-Schriften -->
+        <link rel="stylesheet" href="assets/fonts/fonts.css" />
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        
+        <style>
+            /* Datenschutz Specific Styles */
+            .datenschutz {
+                padding: 120px 0 80px 0;
+                background: #ffffff;
+                min-height: 100vh;
+            }
+            
+            .datenschutz__container {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 0 40px;
+            }
+            
+            .datenschutz__title {
+                font-family: 'Lato', sans-serif;
+                font-size: 3rem;
+                font-weight: 700;
+                color: #1E537C;
+                margin-bottom: 30px;
+                text-align: left;
+            }
+            
+            .datenschutz__intro {
+                font-family: 'Nunito', sans-serif;
+                font-size: 1.1rem;
+                line-height: 1.7;
+                color: #555;
+                margin-bottom: 50px;
+                padding: 30px;
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                border-radius: 15px;
+                border-left: 4px solid #F9B233;
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .datenschutz__intro-icon {
+                color: #F9B233;
+                font-size: 2rem;
+                margin-top: 5px;
+            }
+            
+            .datenschutz__section {
+                background: #ffffff;
+                border-radius: 15px;
+                padding: 35px;
+                margin-bottom: 25px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                border: 1px solid #f0f0f0;
+                transition: all 0.3s ease;
+            }
+            
+            .datenschutz__section:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            }
+            
+            .datenschutz__section-title {
+                font-family: 'Lato', sans-serif;
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: #1E537C;
+                margin-bottom: 20px;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .datenschutz__section-icon {
+                color: #F9B233;
+                font-size: 1.2rem;
+            }
+            
+            .datenschutz__text {
+                font-family: 'Nunito', sans-serif;
+                font-size: 1rem;
+                line-height: 1.7;
+                color: #444;
+                margin-bottom: 15px;
+            }
+            
+            .datenschutz__text:last-child {
+                margin-bottom: 0;
+            }
+            
+            .datenschutz__list {
+                list-style: none;
+                padding: 0;
+                margin: 20px 0;
+            }
+            
+            .datenschutz__list-item {
+                font-family: 'Nunito', sans-serif;
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #444;
+                margin-bottom: 12px;
+                padding-left: 25px;
+                position: relative;
+            }
+            
+            .datenschutz__list-item::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                color: #F9B233;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            
+            .datenschutz__highlight {
+                background: linear-gradient(120deg, rgba(249, 178, 51, 0.2) 0%, rgba(249, 178, 51, 0.1) 100%);
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px 0;
+                border-left: 3px solid #F9B233;
+            }
+            
+            .datenschutz__contact-box {
+                background: #1E537C;
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                margin: 30px 0;
+                text-align: center;
+            }
+            
+            .datenschutz__contact-title {
+                font-family: 'Lato', sans-serif;
+                font-size: 1.3rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: #F9B233;
+            }
+            
+            .datenschutz__contact-info {
+                font-family: 'Nunito', sans-serif;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            @media (max-width: 768px) {
+                .datenschutz {
+                    padding: 80px 0 60px 0;
+                }
+                
+                .datenschutz__container {
+                    padding: 0 20px;
+                }
+                
+                .datenschutz__title {
+                    font-size: 2.2rem;
+                    margin-bottom: 25px;
+                }
+                
+                .datenschutz__intro {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 25px 20px;
+                }
+                
+                .datenschutz__section {
+                    padding: 25px 20px;
+                }
+                
+                .datenschutz__section-title {
+                    font-size: 1.2rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="angebot"></div>
+
+        <!-- Datenschutz Section -->
+        <section class="datenschutz">
+            <div class="datenschutz__container">
+                <h1 class="datenschutz__title">Datenschutz bei Seda24 – Ihre Daten sind sicher</h1>
+                
+                <div class="datenschutz__intro">
+                    <i class="fas fa-shield-alt datenschutz__intro-icon"></i>
+                    <div>
+                        <p><strong>Vertrauen durch Transparenz</strong></p>
+                        <p>Der Schutz Ihrer persönlichen Daten hat für uns höchste Priorität. Diese Datenschutzerklärung informiert Sie umfassend darüber, wie wir mit Ihren Daten umgehen – DSGVO-konform und transparent.</p>
+                    </div>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-user-shield datenschutz__section-icon"></i>
+                        Verantwortliche Stelle
+                    </h2>
+                    <div class="datenschutz__text">
+                        Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+                    </div>
+                    <div class="datenschutz__contact-box">
+                        <div class="datenschutz__contact-title">Seda Consulting GmbH</div>
+                        <div class="datenschutz__contact-info">
+                            Geschäftsführer: Drazen Sertic<br>
+                            Zeppelinstr. 42, 76571 Gaggenau<br>
+                            Telefon: (07225) 180 49 70<br>
+                            E-Mail: mail@seda24.de
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-balance-scale datenschutz__section-icon"></i>
+                        Ihre Rechte als Nutzer
+                    </h2>
+                    <div class="datenschutz__text">
+                        Nach der DSGVO stehen Ihnen folgende Rechte zu:
+                    </div>
+                    <ul class="datenschutz__list">
+                        <li class="datenschutz__list-item"><strong>Auskunftsrecht:</strong> Sie können jederzeit Auskunft über die von uns gespeicherten Daten verlangen</li>
+                        <li class="datenschutz__list-item"><strong>Berichtigungsrecht:</strong> Unrichtige Daten werden unverzüglich korrigiert</li>
+                        <li class="datenschutz__list-item"><strong>Löschungsrecht:</strong> Ihre Daten werden auf Wunsch gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten bestehen</li>
+                        <li class="datenschutz__list-item"><strong>Widerspruchsrecht:</strong> Sie können der Datenverarbeitung widersprechen</li>
+                        <li class="datenschutz__list-item"><strong>Datenübertragbarkeit:</strong> Sie erhalten Ihre Daten in einem gängigen, maschinenlesbaren Format</li>
+                        <li class="datenschutz__list-item"><strong>Beschwerderecht:</strong> Sie können sich bei der zuständigen Aufsichtsbehörde beschweren</li>
+                    </ul>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-cookie-bite datenschutz__section-icon"></i>
+                        Cookies & Website-Analyse
+                    </h2>
+                    <div class="datenschutz__text">
+                        Unsere Website verwendet technisch notwendige Cookies für die Grundfunktionalität. Diese sind für den Betrieb der Website erforderlich.
+                    </div>
+                    <div class="datenschutz__highlight">
+                        <strong>Keine Tracking-Cookies:</strong> Wir verwenden bewusst keine Analyse-Tools wie Google Analytics, die Ihre Daten an Dritte übertragen würden.
+                    </div>
+                    <div class="datenschutz__text">
+                        Sie können Cookies in Ihren Browser-Einstellungen verwalten oder deaktivieren. Dies kann jedoch die Funktionalität der Website beeinträchtigen.
+                    </div>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-lock datenschutz__section-icon"></i>
+                        SSL-Verschlüsselung & Sicherheit
+                    </h2>
+                    <div class="datenschutz__text">
+                        Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt.
+                    </div>
+                    <div class="datenschutz__text">
+                        <strong>Weitere Sicherheitsmaßnahmen:</strong>
+                    </div>
+                    <ul class="datenschutz__list">
+                        <li class="datenschutz__list-item">Regelmäßige Sicherheitsupdates</li>
+                        <li class="datenschutz__list-item">Zugriffsbeschränkungen auf Serverdaten</li>
+                        <li class="datenschutz__list-item">Verschlüsselte Datenübertragung</li>
+                        <li class="datenschutz__list-item">Sichere Passwort-Richtlinien</li>
+                    </ul>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-envelope datenschutz__section-icon"></i>
+                        Kontaktformulare & E-Mail
+                    </h2>
+                    <div class="datenschutz__text">
+                        Wenn Sie uns per Kontaktformular, E-Mail oder Telefon kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.
+                    </div>
+                    <div class="datenschutz__text">
+                        <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung Ihrer Anfrage).
+                    </div>
+                    <div class="datenschutz__highlight">
+                        <strong>Speicherdauer:</strong> Ihre Daten werden gelöscht, sobald sie für die Erreichung des Zwecks nicht mehr erforderlich sind, längstens jedoch nach 3 Jahren.
+                    </div>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-handshake datenschutz__section-icon"></i>
+                        Kundendaten & Vertragsabwicklung
+                    </h2>
+                    <div class="datenschutz__text">
+                        Zur Erbringung unserer Reinigungsdienstleistungen erheben und verarbeiten wir folgende Daten:
+                    </div>
+                    <ul class="datenschutz__list">
+                        <li class="datenschutz__list-item">Name, Anschrift, Telefonnummer, E-Mail-Adresse</li>
+                        <li class="datenschutz__list-item">Angaben zur zu reinigenden Immobilie</li>
+                        <li class="datenschutz__list-item">Vertragsdaten und Abrechnungsinformationen</li>
+                        <li class="datenschutz__list-item">Bankverbindung (bei SEPA-Lastschrift)</li>
+                    </ul>
+                    <div class="datenschutz__text">
+                        <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines Vertrags)<br>
+                        <strong>Speicherdauer:</strong> 10 Jahre gemäß steuerrechtlichen Aufbewahrungspflichten
+                    </div>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-share-alt datenschutz__section-icon"></i>
+                        Externe Dienste
+                    </h2>
+                    <div class="datenschutz__text">
+                        Wir nutzen folgende externe Dienste, die eigene Datenschutzbestimmungen haben:
+                    </div>
+                    <div class="datenschutz__text">
+                        <strong>Schriftarten:</strong> Wir verwenden ausschließlich systembasierte Schriftarten, die lokal auf Ihrem Gerät verfügbar sind. Es werden keine Daten an externe Schriftarten-Anbieter übertragen.
+                    </div>
+                    <div class="datenschutz__text">
+                        <strong>WhatsApp Business:</strong> Unser WhatsApp-Kontakt ist freiwillig. Dabei gelten die Datenschutzbestimmungen von Meta/WhatsApp.
+                    </div>
+                    <div class="datenschutz__highlight">
+                        <strong>Hinweis:</strong> Die Nutzung externer Dienste erfolgt auf Basis unseres berechtigten Interests an einer ansprechenden Website-Gestaltung (Art. 6 Abs. 1 lit. f DSGVO).
+                    </div>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-users-cog datenschutz__section-icon"></i>
+                        Mitarbeiter & Subunternehmer
+                    </h2>
+                    <div class="datenschutz__text">
+                        Unsere Mitarbeiter sind zur Verschwiegenheit verpflichtet und im Datenschutz geschult. Bei der Weitergabe von Daten an Subunternehmer (z.B. Buchhaltung) stellen wir durch entsprechende Verträge sicher, dass der Datenschutz gewährleistet bleibt.
+                    </div>
+                    <div class="datenschutz__text">
+                        <strong>Auftragsverarbeitung:</strong> Externe Dienstleister erhalten nur die für ihre Aufgabe notwendigen Daten und sind vertraglich zur Einhaltung des Datenschutzes verpflichtet.
+                    </div>
+                </div>
+
+                <div class="datenschutz__section">
+                    <h2 class="datenschutz__section-title">
+                        <i class="fas fa-sync-alt datenschutz__section-icon"></i>
+                        Änderungen der Datenschutzerklärung
+                    </h2>
+                    <div class="datenschutz__text">
+                        Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um sie an veränderte Rechtslage oder Änderungen unseres Services anzupassen.
+                    </div>
+                    <div class="datenschutz__highlight">
+                        <strong>Stand dieser Datenschutzerklärung:</strong> 03.06.2025<br>
+                        Bei wesentlichen Änderungen informieren wir Sie rechtzeitig über unsere Website oder per E-Mail.
+                    </div>
+                </div>
+
+                <div class="datenschutz__contact-box">
+                    <div class="datenschutz__contact-title">
+                        <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
+                        Fragen zum Datenschutz?
+                    </div>
+                    <div class="datenschutz__contact-info">
+                        Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte kontaktieren Sie uns gerne:<br>
+                        <strong>E-Mail:</strong> mail@seda24.de | <strong>Telefon:</strong> (07225) 180 49 70
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="footer"></div>
+        <div id="quick-contact"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/include.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                initMobileNavigation();
+            });
+        </script>
+    </body>
+</html>

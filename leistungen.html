@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alle Leistungen – SEDA24 Reinigungsservice Gaggenau</title>
+    <meta name="description" content="Übersicht aller Reinigungsleistungen von SEDA24 in Gaggenau, Rastatt und Baden-Baden. Gewerblich und privat - professionell und zuverlässig.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    .services-overview-page {
+        padding: 80px 0;
+        background: #f8f9fa;
+    }
+    
+    .services-hero {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .services-hero h1 {
+        font-size: 3rem;
+        color: #1E537C;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .services-hero p {
+        font-size: 1.25rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .services-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    .category-block {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .category-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .category-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    .category-icon.business {
+        background: linear-gradient(135deg, #1E537C 0%, #2a6bb5 100%);
+    }
+    
+    .category-icon.private {
+        background: linear-gradient(135deg, #F9B233 0%, #e6a42e 100%);
+    }
+    
+    .category-title {
+        font-size: 2rem;
+        color: #1E537C;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+    .category-description {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    
+    .services-list {
+        display: grid;
+        gap: 20px;
+    }
+    
+    .service-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .service-item:hover {
+        background: #e9ecef;
+        transform: translateY(-2px);
+    }
+    
+    .service-item i {
+        color: #F9B233;
+        font-size: 1.2rem;
+        margin-right: 15px;
+        width: 20px;
+    }
+    
+    .service-item span {
+        font-weight: 500;
+        color: #333;
+    }
+    
+    .category-cta {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .btn-category {
+        background: #1E537C;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    
+    .btn-category:hover {
+        background: #F9B233;
+        text-decoration: none;
+        color: white;
+        transform: translateY(-2px);
+    }
+    
+    @media (max-width: 768px) {
+        .services-categories {
+            grid-template-columns: 1fr;
+        }
+        
+        .services-hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .category-block {
+            padding: 30px 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header Include -->
+    <div id="header"></div>
+
+    <!-- Rabatt Banner -->
+    <div id="rabatt-banner"></div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="services-overview-page">
+            <div class="container">
+                <div class="services-hero">
+                    <h1>Alle unsere Reinigungsleistungen</h1>
+                    <p>Professionelle Sauberkeit für Gewerbe und Privat – individuell, zuverlässig und mit höchsten Qualitätsstandards in Gaggenau, Rastatt und Baden-Baden.</p>
+                </div>
+
+                <div class="services-categories">
+                    <!-- Gewerbekunden -->
+                    <div class="category-block">
+                        <div class="category-header">
+                            <div class="category-icon business">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h2 class="category-title">Für Gewerbekunden</h2>
+                            <p class="category-description">Professionelle Sauberkeit für Ihr Unternehmen</p>
+                        </div>
+
+                        <div class="services-list">
+                            <div class="service-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Büroreinigung – Täglich saubere Arbeitsplätze</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-broom"></i>
+                                <span>Unterhaltsreinigung – Kontinuierliche Sauberkeit</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-window-maximize"></i>
+                                <span>Glasreinigung – Perfekte Durchsicht</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-tools"></i>
+                                <span>Sonderreinigungen – Spezielle Anforderungen</span>
+                            </div>
+                        </div>
+
+                        <div class="category-cta">
+                            <a href="gewerbliche-reinigung.html" class="btn-category">
+                                Alle Gewerbeleistungen ansehen
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Privatkunden -->
+                    <div class="category-block">
+                        <div class="category-header">
+                            <div class="category-icon private">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h2 class="category-title">Für Privatkunden</h2>
+                            <p class="category-description">Mehr Zeit für die wichtigen Dinge im Leben</p>
+                        </div>
+
+                        <div class="services-list">
+                            <div class="service-item">
+                                <i class="fas fa-house-user"></i>
+                                <span>Haushaltsreinigung – Ihr Zuhause perfekt gepflegt</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-window-restore"></i>
+                                <span>Fensterreinigung – Streifenfrei sauber</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-stairs"></i>
+                                <span>Treppenhausreinigung – Saubere Eingangsbereiche</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Regelmäßige Termine – Flexibel nach Ihren Wünschen</span>
+                            </div>
+                        </div>
+
+                        <div class="category-cta">
+                            <a href="private-reinigung.html" class="btn-category">
+                                Alle Privatleistungen ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div style="text-align: center; background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="color: #1E537C; font-size: 2rem; margin-bottom: 20px;">Bereit für makellose Sauberkeit?</h3>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 30px;">Kontaktieren Sie uns für eine kostenlose Beratung und Ihr individuelles Angebot.</p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="tel:+4972251804970" class="btn btn--primary">
+                            <i class="fas fa-phone"></i> 07225 / 180 49 70
+                        </a>
+                        <a href="kontakt.html#contact-form" class="btn btn--secondary">
+                            <i class="fas fa-envelope"></i> Kostenlos anfragen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('SEDA24 Alle Leistungen geladen');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init('K1qlkK03HzkDwdKEq');
+            }
+        });
+    </script>
+</body>
+</html>

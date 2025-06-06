@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Private Reinigung für Haushalte | SEDA24</title>
+        <meta name="description" content="Zuverlässige Haushaltsreinigung für Privatkunden. Flexible Termine, 10 Mio. € versichert. Jetzt Angebot anfordern." />
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/css/image-optimization.css" />
+        <link rel="stylesheet" href="assets/css/homepage-fix.css" />
+
+        
+        <!-- Page-specific navbar color -->
+        <style>
+        .header {
+            background: #1E537C !important;
+        }
+        .navbar {
+            background: #1E537C !important;
+        }
+        
+        /* Fix service card heights */
+        .service-card {
+            min-height: 500px !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        .service-card__content {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+        }
+        .service-card__content a {
+            margin-top: auto !important;
+        }
+        
+        /* Header positioning */
+        .private-hero {
+            margin-top: 0px !important;
+            padding-top: 40px !important;
+            padding-bottom: 60px !important;
+        }
+        
+        /* CRITICAL MOBILE RESPONSIVE FIXES */
+        @media (max-width: 768px) {
+            .private-hero .container > div:nth-child(2) {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+            
+            .private-hero h1 {
+                font-size: 1.8rem !important;
+                line-height: 1.3 !important;
+                word-break: break-word !important;
+            }
+            
+            .private-hero p {
+                font-size: 1.1rem !important;
+            }
+            
+            .hero-button-disabled {
+                pointer-events: none !important;
+                cursor: default !important;
+            }
+            
+            /* Banner Mobile Optimierung */
+            @media (max-width: 768px) {
+                .hero-banner {
+                    font-size: 0.7rem !important;
+                    padding: 6px 12px !important;
+                    max-width: 80% !important;
+                    margin: 0 auto 20px !important;
+                    white-space: normal !important;
+                    line-height: 1.2 !important;
+                }
+                .desktop-text {
+                    display: none !important;
+                }
+                .mobile-text {
+                    display: inline !important;
+                }
+            }
+            
+            /* USP Section Mobile - DEFINITIV */
+            @media (max-width: 768px) {
+                section div[style*="grid-template-columns: repeat(3, 1fr)"] {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    gap: 25px !important;
+                    padding: 0 20px !important;
+                }
+                
+                section div[style*="grid-template-columns: repeat(3, 1fr)"] > div {
+                    width: 100% !important;
+                    margin: 0 auto !important;
+                    max-width: 300px !important;
+                }
+            }
+            
+            .private-hero + div + section div[style*="width: 80px; height: 80px"] {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .private-hero + div + section div[style*="text-align: center"] {
+                padding: 15px !important;
+                background: #f8f9fa !important;
+                border-radius: 10px !important;
+                margin-bottom: 10px !important;
+            }
+            
+            /* Service Section Titles Mobile */
+            h2[style*="font-size: 2.4rem"] {
+                font-size: 1.6rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            h2[style*="font-size: 2.5rem"] {
+                font-size: 1.6rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            .service-cards-container {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 20px !important;
+                padding: 20px !important;
+            }
+            
+            .service-card {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 20px !important;
+                min-height: auto !important;
+                background: rgba(255, 255, 255, 0.25) !important;
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+                border: 1px solid rgba(255, 255, 255, 0.3) !important;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+                border-radius: 15px !important;
+            }
+            
+            .service-card h3 {
+                font-size: 1.3rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .service-card p {
+                font-size: 1rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            /* Discount/CTA Box Mobile */
+            div[style*="background: white; border-radius: 20px; padding: 60px"] {
+                padding: 20px !important;
+                border-radius: 15px !important;
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                text-align: center !important;
+            }
+            
+            div[style*="background: white; border-radius: 20px; padding: 60px"] h2 {
+                font-size: 1.4rem !important;
+            }
+            
+            .btn {
+                width: 100% !important;
+                padding: 12px !important;
+                font-size: 1rem !important;
+                text-align: center !important;
+            }
+        }
+        </style>
+    </head>
+<body class="homepage">
+        <div id="header"></div>
+        
+
+        <!-- Hero Section -->
+        <section class="private-hero" style="background: linear-gradient(135deg, #1E537C, #1E537C); padding: 60px 0 80px; color: white; text-align: center;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <!-- Badge -->
+                <div class="hero-banner" style="background: #F9B233; color: #1E537C; padding: 12px 48px; border-radius: 25px; display: inline-block; margin-bottom: 30px; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; text-align: center; white-space: nowrap; line-height: 1.3;">
+                    <span class="desktop-text">PRIVATE REINIGUNG IN GAGGENAU, RASTATT & BADEN-BADEN</span>
+                    <span class="mobile-text" style="display: none;">Private Reinigung<br>Gaggenau · Rastatt · Baden-Baden</span>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                    <!-- Image LINKS -->
+                    <div style="text-align: center;">
+                        <img src="assets/img/private-fensterreinigung-seda24.jpg" alt="SEDA24 Private Reinigung" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); object-fit: cover; width: 100%; display: block;" />
+                    </div>
+                    
+                    <!-- Text Content RECHTS -->
+                    <div style="text-align: center;">
+                        <h1 style="font-size: 3.2rem; font-weight: 700; line-height: 1.1; margin-bottom: 30px; color: white; text-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+                            Private Reinigung für Haushalte
+                        </h1>
+                        <p style="font-size: 1.4rem; margin-bottom: 25px; color: #f3f3f3; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto;">
+                            Sauberkeit ohne Stress für Ihr Zuhause und mehr Zeit für das Wichtige.
+                        </p>
+                        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+                            <a href="kontakt.html" style="background: #F9B233; color: #1E537C; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 1rem; box-shadow: 0 6px 20px rgba(249,178,51,0.4); white-space: nowrap; display: inline-block; text-decoration: none;">
+                                Jetzt anfragen
+                            </a>
+                            <a href="kontakt.html" style="border: 2px solid white; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; white-space: nowrap;">
+                                Kostenlose Beratung
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Banner -->
+        <div id="quick-contact" style="display: none;"></div>
+
+        <!-- USP Section -->
+        <section style="padding: 80px 0; background: #f8f9fa;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: #1E537C; margin-bottom: 60px;">Warum SEDA24 für Privatkunden?</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px;">
+                    <div style="text-align: center;">
+                        <div style="background: #1E537C; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <i class="fas fa-heart" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #1E537C; margin-bottom: 15px; line-height: 1.3;">Vertrauensvoll</h3>
+                        <p style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Persönliche Betreuung & Diskretion in Ihrem Zuhause</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #1E537C; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <i class="fas fa-calendar-alt" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #1E537C; margin-bottom: 15px; line-height: 1.3;">Flexibel</h3>
+                        <p style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Termine nach Ihren Wünschen, auch am Wochenende</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #1E537C; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 600; color: #1E537C; margin-bottom: 15px; line-height: 1.3;">10 Mio. € versichert</h3>
+                        <p style="font-size: 1rem; color: #666; line-height: 1.5; margin: 0;">Volle Absicherung für Ihre Sicherheit & unser Vertrauen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-overview" id="private" style="background: white; color: #333; margin-top: 20px; padding: 80px 0;">
+            <div class="container">
+                <div class="category">
+                    <div class="category__header">
+                        <div class="category__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h2 style="font-size: 2.4rem; font-weight: 700; color: #F9B233; margin-bottom: 20px; text-align: center;">Unsere privaten Reinigungsleistungen</h2>
+                        <p style="font-size: 1.2rem; color: #333; text-align: center; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                            Hier finden Sie alle Leistungen für Privathaushalte in Gaggenau,<br>
+                            Rastatt & Baden-Baden auf einen Blick.
+                        </p>
+                    </div>
+                
+                    <div class="category__services">
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="assets/img/seda24-haushaltsreinigung-header.jpg" alt="Haushaltsreinigung SEDA24">
+                        </div>
+                        <div class="service-card__content">
+                            <h4>Haushaltsreinigung</h4>
+                            <p>Sauberkeit ohne Stress für Ihr Zuhause</p>
+                            <ul>
+                                <li>Wohnräume & Küche</li>
+                                <li>Wöchentlich oder nach Bedarf</li>
+                                <li>Umweltfreundliche Reinigungsmittel</li>
+                            </ul>
+                            <a href="leistungen/privat/haushaltsreinigung.html" class="service-card__link">Mehr erfahren</a>
+                        </div>
+                    </div>
+                        <div class="service-card">
+                            <div class="service-card__image">
+                                <img src="https://seda24.eu/wp-content/uploads/2025/05/seda24-fensterreinigung-privathaushalt-kachel.jpg" alt="Fensterreinigung SEDA24">
+                            </div>
+                            <div class="service-card__content">
+                                <h4>Fensterreinigung</h4>
+                                <p>Streifenfreier Durchblick für Ihr Eigenheim</p>
+                                <ul>
+                                    <li>Innen- & Außenreinigung</li>
+                                    <li>Auch schwer erreichbare Fenster</li>
+                                    <li>Professionelle Ausrüstung</li>
+                                </ul>
+                                <a href="leistungen/privat/fensterreinigung.html" class="service-card__link">Mehr erfahren</a>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-card__image">
+                                <img src="assets/img/seda24-treppenhausreinigung-header.jpg" alt="Treppenhausreinigung SEDA24">
+                            </div>
+                            <div class="service-card__content">
+                                <h4>Treppenhausreinigung</h4>
+                                <p>Saubere Gemeinschaftsbereiche für Ihr Mehrfamilienhaus</p>
+                                <ul>
+                                    <li>Treppen & Flure</li>
+                                    <li>Regelmäßige Grundpflege</li>
+                                    <li>Hausordnung-konform</li>
+                                </ul>
+                                <a href="leistungen/privat/treppenhausreinigung.html" class="service-card__link">Mehr erfahren</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <!-- Cross-Link -->
+                    <div style="text-align: center; margin-top: 60px;">
+                        <p style="font-size: 0.95rem; color: #888; margin: 0;">
+                            Sie suchen gewerbliche Reinigungsdienste? → 
+                            <a href="gewerbliche-reinigung.html" style="color: #1E537C; text-decoration: none; font-weight: 500;">Zur gewerblichen Reinigungsseite</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Section -->
+        <section style="padding: 100px 0 120px; background: white;">
+            <div class="container" style="max-width: 1000px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.2rem; font-weight: 600; color: #1E537C; margin-bottom: 40px;">Unsere Reinigungsqualität im Fokus</h2>
+                <p style="font-size: 1.2rem; color: #555; max-width: 700px; margin: 0 auto 50px; line-height: 1.6;">
+                    Unser erfahrenes Team arbeitet diskret und zuverlässig in Ihrem Zuhause – mit höchster Sorgfalt und persönlicher Betreuung.
+                </p>
+                <div style="margin-bottom: 40px;">
+                    <img src="assets/img/seda24-haushaltsreinigung-sektion.jpg" alt="SEDA24 Haushaltsreinigung" style="max-width: 500px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.12);">
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 600px; margin: 0 auto;">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-shield-check" style="font-size: 2rem; color: #1E537C; margin-bottom: 10px;"></i>
+                        <h4 style="font-size: 1rem; color: #1E537C; margin: 0;">Versichert</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">10 Mio. €</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-heart" style="font-size: 2rem; color: #F9B233; margin-bottom: 10px;"></i>
+                        <h4 style="font-size: 1rem; color: #1E537C; margin: 0;">Vertrauensvoll</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">Diskret & sicher</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-star" style="font-size: 2rem; color: #1E537C; margin-bottom: 10px;"></i>
+                        <h4 style="font-size: 1rem; color: #1E537C; margin: 0;">Qualität</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0;">15+ Jahre</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jetzt testen Section -->
+        <section class="cta" style="background: #f8f9fa; padding: 80px 0;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="background: white; border-radius: 20px; padding: 60px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div>
+                        <h2 style="font-size: 2.4rem; font-weight: 700; color: #1E537C; margin-bottom: 20px; line-height: 1.2;">
+                            Jetzt testen – 22% Sofortrabatt im ersten Kennenlernmonat!
+                        </h2>
+                        <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px; line-height: 1.6;">
+                            Ohne Vertragsbindung. Überzeugen Sie sich von unserer Qualität – risikofrei & flexibel.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 35px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                                <span style="color: #333; font-size: 1.1rem;">Keine Mindestlaufzeit</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                                <span style="color: #333; font-size: 1.1rem;">Flexible Terminplanung</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                                <span style="color: #333; font-size: 1.1rem;">Kostenloses Erstgespräch</span>
+                            </div>
+                        </div>
+                        <a href="kontakt.html" style="background: #F9B233; color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.2rem; box-shadow: 0 6px 20px rgba(249,178,51,0.3); transition: all 0.3s ease; display: inline-block;">
+                            Jetzt Angebot anfordern →
+                        </a>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F9B233; color: white; width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; text-align: center; line-height: 1.2;">
+                            22%<br>RABATT
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Include -->
+        <div id="footer"></div>
+
+        <!-- JavaScript -->
+        <script src="assets/js/include.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script src="assets/js/animations.js"></script>
+        <script src="assets/js/forms.js"></script>
+        <script src="assets/js/scroll.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22% Rabatt sichern - SEDA24</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    .rueckruf-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 40px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    
+    .rueckruf-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .rueckruf-header h1 {
+        color: #1E537C;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .rueckruf-header p {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .rueckruf-form {
+        display: grid;
+        gap: 20px;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group label {
+        color: #1E537C;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 1rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 15px;
+        border: 2px solid #e1e5e9;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        font-family: inherit;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #F9B233;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(249, 178, 51, 0.1);
+    }
+    
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    @media (max-width: 768px) {
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .rueckruf-btn {
+        background: linear-gradient(135deg, #F9B233 0%, #e6a42e 100%);
+        color: white;
+        padding: 18px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+    
+    .rueckruf-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(249, 178, 51, 0.3);
+    }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <main class="rueckruf-container">
+        <div class="rueckruf-header">
+            <h1><i class="fas fa-percentage"></i> 22% Rabatt sichern</h1>
+            <p>Sichern Sie sich jetzt 22% Rabatt auf Ihre erste Reinigung! Gültig für Neu- und Bestandskunden.</p>
+        </div>
+
+        <form id="rabattForm" class="rueckruf-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Telefonnummer *</label>
+                    <input type="tel" id="telefon" name="telefon" required placeholder="z.B. 0721 123456">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">E-Mail-Adresse *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="kunde_typ">Kunde *</label>
+                    <select id="kunde_typ" name="kunde_typ" required>
+                        <option value="">Bitte wählen...</option>
+                        <option value="Neukunde">Neukunde</option>
+                        <option value="Bestandskunde">Bestandskunde</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Gewünschter Service *</label>
+                <select id="service" name="service" required>
+                    <option value="">Bitte wählen...</option>
+                    <option value="Büroreinigung">Büroreinigung</option>
+                    <option value="Unterhaltsreinigung">Unterhaltsreinigung</option>
+                    <option value="Glasreinigung Gewerbe">Glasreinigung Gewerbe</option>
+                    <option value="Haushaltsreinigung">Haushaltsreinigung</option>
+                    <option value="Fensterreinigung Privat">Fensterreinigung Privat</option>
+                    <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="groesse">Größe/Umfang</label>
+                <input type="text" id="groesse" name="groesse" placeholder="z.B. 100 qm Büro, 3-Zimmer-Wohnung">
+            </div>
+
+            <div class="form-group">
+                <label for="nachricht">Zusätzliche Informationen</label>
+                <textarea id="nachricht" name="nachricht" rows="4" placeholder="Weitere Details... (optional)"></textarea>
+            </div>
+
+            <button type="submit" class="rueckruf-btn">
+                <i class="fas fa-percentage"></i> 22% Rabatt sichern
+            </button>
+        </form>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="assets/js/include.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        document.getElementById('rabattForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const rabattData = {
+                name: formData.get('name'),
+                telefon: formData.get('telefon'),
+                email: formData.get('email'),
+                kunde_typ: formData.get('kunde_typ'),
+                service: formData.get('service'),
+                groesse: formData.get('groesse') || 'Nicht angegeben',
+                nachricht: formData.get('nachricht') || 'Keine zusätzlichen Informationen',
+                timestamp: new Date().toLocaleString('de-DE')
+            };
+            
+            const submitBtn = document.querySelector('.rueckruf-btn');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Wird gesendet...';
+            submitBtn.disabled = true;
+            
+            sendRabattEmail(rabattData)
+                .then(() => {
+                    showSuccessMessage();
+                })
+                .catch(error => {
+                    console.error('Fehler:', error);
+                    showSuccessMessage();
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-percentage"></i> 22% Rabatt sichern';
+                    submitBtn.disabled = false;
+                });
+        });
+        
+        function sendRabattEmail(data) {
+            const serviceID = 'service_bech8of';
+            const templateID = 'template_meubofk';
+            const publicKey = 'K1qlkK03HzkDwdKEq';
+            
+            const templateParams = {
+                to_email: 'mail@seda24.de',
+                from_name: data.name,
+                from_email: data.email,
+                phone: data.telefon,
+                kunde_typ: data.kunde_typ,
+                service: data.service,
+                groesse: data.groesse,
+                message: data.nachricht,
+                timestamp: data.timestamp,
+                subject: `[22% RABATT] ${data.kunde_typ} - ${data.service} - ${data.name}`
+            };
+            
+            if (typeof emailjs !== 'undefined') {
+                return emailjs.send(serviceID, templateID, templateParams, publicKey);
+            } else {
+                throw new Error('EmailJS nicht verfügbar');
+            }
+        }
+        
+        function showSuccessMessage() {
+            alert('Perfekt! Ihr 22% Rabatt-Code wurde gesendet. Wir melden uns schnellstmöglich bei Ihnen.');
+            document.getElementById('rabattForm').reset();
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

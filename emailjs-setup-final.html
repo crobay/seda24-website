@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Template Setup - SEDA24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1E537C;
+            border-bottom: 3px solid #F9B233;
+            padding-bottom: 10px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #F9B233;
+            border-radius: 5px;
+        }
+        .code-block {
+            background: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .preview {
+            border: 2px solid #F9B233;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 SEDA24 E-Mail Template - Finaler Setup</h1>
+        
+        <div class="success">
+            <strong>Status:</strong> EmailJS ist konfiguriert und funktioniert! Jetzt können Sie das E-Mail-Design verbessern.
+        </div>
+
+        <h2>Schritt 1: Zurück zu EmailJS Dashboard</h2>
+        <div class="step">
+            <p>1. Gehen Sie zu <a href="https://dashboard.emailjs.com" target="_blank">EmailJS Dashboard</a></p>
+            <p>2. Klicken Sie auf "Email Templates"</p>
+            <p>3. Finden Sie Ihr Template "template_c5g5gq6"</p>
+            <p>4. Klicken Sie auf "Edit"</p>
+        </div>
+
+        <h2>Schritt 2: HTML-Template ersetzen</h2>
+        <div class="step">
+            <p>Ersetzen Sie den kompletten Inhalt Ihres EmailJS-Templates mit diesem professionellen HTML-Code:</p>
+            
+            <div class="code-block"><!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDA24 Kontaktanfrage</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f5f5;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #1E537C 0%, #2a6aa0 100%); color: white; padding: 30px 20px; text-align: center;">
+            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">SEDA24</h1>
+            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Neue Kontaktanfrage über Website</p>
+        </div>
+        
+        <!-- Alert Banner -->
+        <div style="background-color: #F9B233; color: #1E537C; padding: 15px 20px; text-align: center; font-weight: bold;">
+            📧 Neue Kundenanfrage eingegangen
+        </div>
+        
+        <!-- Customer Info -->
+        <div style="padding: 30px 20px;">
+            <h2 style="color: #1E537C; margin: 0 0 20px 0; font-size: 22px; border-bottom: 2px solid #F9B233; padding-bottom: 10px;">
+                Kundendaten
+            </h2>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+                <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #1E537C; width: 120px;">
+                        👤 Name:
+                    </td>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                        {{from_name}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #1E537C;">
+                        📧 E-Mail:
+                    </td>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                        <a href="mailto:{{from_email}}" style="color: #1E537C; text-decoration: none;">{{from_email}}</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #1E537C;">
+                        🏢 Firma:
+                    </td>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                        {{company}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #1E537C;">
+                        📞 Telefon:
+                    </td>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                        <a href="tel:{{phone}}" style="color: #1E537C; text-decoration: none;">{{phone}}</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; color: #1E537C;">
+                        🛠️ Service:
+                    </td>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                        {{service}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 0; font-weight: bold; color: #1E537C;">
+                        🕐 Zeitpunkt:
+                    </td>
+                    <td style="padding: 12px 0;">
+                        {{timestamp}}
+                    </td>
+                </tr>
+            </table>
+            
+            <!-- Message -->
+            <h3 style="color: #1E537C; margin: 25px 0 15px 0; font-size: 18px;">
+                💬 Nachricht:
+            </h3>
+            <div style="background-color: #f8f9fa; border-left: 4px solid #F9B233; padding: 20px; border-radius: 5px; line-height: 1.6;">
+                {{message}}
+            </div>
+            
+            <!-- Action Buttons -->
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="mailto:{{from_email}}?subject=Re: Ihre Anfrage bei SEDA24" 
+                   style="display: inline-block; background-color: #1E537C; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
+                    📧 Antworten
+                </a>
+                <a href="tel:{{phone}}" 
+                   style="display: inline-block; background-color: #F9B233; color: #1E537C; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 10px;">
+                    📞 Anrufen
+                </a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="background-color: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <p style="margin: 0; color: #666; font-size: 14px;">
+                <strong>SEDA24 - Reinigung mit Verantwortung</strong><br>
+                Automatisch gesendet über <a href="https://seda24.de" style="color: #1E537C;">seda24.de</a>
+            </p>
+            <p style="margin: 10px 0 0 0; color: #999; font-size: 12px;">
+                Diese E-Mail wurde über das Kontaktformular der SEDA24-Website gesendet.
+            </p>
+        </div>
+    </div>
+</body>
+</html></div>
+        </div>
+
+        <h2>Schritt 3: Template Speichern & Testen</h2>
+        <div class="step">
+            <p>1. Klicken Sie auf "Save" in EmailJS</p>
+            <p>2. Testen Sie das neue Design über Ihr Kontaktformular</p>
+            <p>3. Die nächste E-Mail wird im neuen SEDA24-Design ankommen!</p>
+        </div>
+
+        <div class="preview">
+            <h3>Vorschau des neuen E-Mail-Designs:</h3>
+            <ul>
+                <li>✓ SEDA24 Branding mit Firmenfarben</li>
+                <li>✓ Übersichtliche Tabelle aller Kundendaten</li>
+                <li>✓ Klickbare E-Mail- und Telefon-Links</li>
+                <li>✓ Professionelle Formatierung</li>
+                <li>✓ Mobile-optimiert</li>
+                <li>✓ Direkte Antwort- und Anruf-Buttons</li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <strong>Ergebnis:</strong> Jede Kontaktanfrage wird als professionell formatierte HTML-E-Mail mit SEDA24-Design ankommen!
+        </div>
+    </div>
+</body>
+</html>

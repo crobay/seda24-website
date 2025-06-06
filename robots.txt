@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Wichtige Seiten
+Allow: /index.html
+Allow: /gewerbliche-reinigung.html
+Allow: /private-reinigung.html
+Allow: /kontakt.html
+Allow: /ueber-uns.html
+Allow: /beratung.html
+Allow: /angebot.html
+Allow: /rabatt.html
+Allow: /rueckruf-formular.html
+
+# CSS und JS
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+
+# Suchmaschinen blockieren
+Disallow: /admin-contacts.html
+Disallow: /test-formulare.html
+Disallow: /*-broken.html
+Disallow: /*-alt.html
+
+# Sitemap
+Sitemap: https://www.seda24.de/sitemap.xml
+
+# Crawl Delay
+Crawl-delay: 1

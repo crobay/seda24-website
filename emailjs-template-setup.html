@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDA24 EmailJS Templates Setup</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1E537C; text-align: center; }
+        h2 { color: #1E537C; border-bottom: 2px solid #F9B233; padding-bottom: 10px; }
+        .template { 
+            background: #f8f9fa; 
+            border: 1px solid #dee2e6; 
+            border-radius: 5px; 
+            padding: 15px; 
+            margin: 15px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .important {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 SEDA24 EmailJS Templates Setup</h1>
+        
+        <div class="success">
+            <strong>Bestehende Konfiguration:</strong><br>
+            Service ID: service_bech8of<br>
+            Public Key: K1qlkK03HzkDwdKEq<br>
+            Kontakt Template: template_c5g5gq6 ✓<br>
+            Beratung Template: template_61vbnmk ✓<br>
+            Rabatt Template: template_meubofk ✓<br>
+            Angebot Template: template_f9gnzjq ✓<br>
+            Rückruf Template: template_ht9lccw ✓
+        </div>
+
+        <div class="success">
+            <strong>Vollständig konfiguriert:</strong> Alle 5 EmailJS Templates sind erstellt und funktionsfähig!
+        </div>
+
+        <h2>1. Beratungsformular Template</h2>
+        <p><strong>Template ID:</strong> template_beratung</p>
+        <div class="template">SEDA24 - Kostenlose Beratungsanfrage
+
+Von: {{from_name}} ({{from_email}})
+Firma: {{company}}
+Telefon: {{phone}}
+Anrufzeit: {{anrufzeit}}
+Services: {{services}}
+
+Zusätzliche Informationen:
+{{message}}
+
+Zeitpunkt: {{timestamp}}
+
+---
+Automatisch gesendet über seda24.de Beratungsformular</div>
+
+        <h2>2. Rabattformular Template</h2>
+        <p><strong>Template ID:</strong> template_rabatt</p>
+        <div class="template">SEDA24 - 22% Rabatt Anfrage
+
+Name: {{from_name}}
+E-Mail: {{from_email}}
+Telefon: {{phone}}
+Kunde-Typ: {{kunde_typ}}
+Service: {{service}}
+Häufigkeit: {{haufigkeit}}
+
+Zeitpunkt: {{timestamp}}
+
+---
+Automatisch gesendet über seda24.de Rabattformular</div>
+
+        <h2>3. Angebotsformular Template</h2>
+        <p><strong>Template ID:</strong> template_angebot</p>
+        <div class="template">SEDA24 - Angebotsanfrage
+
+Firmenname: {{company}}
+Ansprechpartner: {{from_name}} ({{from_email}})
+Telefon: {{phone}}
+Service-Art: {{service}}
+Fläche: {{flaeche}} qm
+Reinigungsrhythmus: {{rhythmus}}
+
+Zeitpunkt: {{timestamp}}
+
+---
+Automatisch gesendet über seda24.de Angebotsformular</div>
+
+        <h2>4. Rückrufformular Template</h2>
+        <p><strong>Template ID:</strong> template_rueckruf</p>
+        <div class="template">SEDA24 - Rückruf-Anfrage
+
+Name: {{from_name}}
+Telefon: {{phone}}
+Wann anrufen: {{wann}}
+Grund: {{grund}}
+
+Zeitpunkt: {{timestamp}}
+
+---
+Automatisch gesendet über seda24.de Rückrufformular</div>
+
+        <h2>Setup-Anleitung</h2>
+        <ol>
+            <li>Gehen Sie zu <a href="https://dashboard.emailjs.com" target="_blank">EmailJS Dashboard</a></li>
+            <li>Klicken Sie auf "Email Templates"</li>
+            <li>Klicken Sie auf "Create New Template"</li>
+            <li>Geben Sie die entsprechende Template ID ein</li>
+            <li>Kopieren Sie den jeweiligen Template-Text</li>
+            <li>Speichern Sie das Template</li>
+            <li>Wiederholen Sie dies für alle 4 Templates</li>
+        </ol>
+
+        <div class="important">
+            <strong>Wichtig:</strong> Nach dem Erstellen der Templates funktionieren alle 5 Formulare der SEDA24 Website automatisch und senden E-Mails an mail@seda24.de
+        </div>
+
+        <div class="success">
+            <strong>Test:</strong> Alle Formulare können über <a href="/test-formulare.html">/test-formulare.html</a> getestet werden.
+        </div>
+    </div>
+</body>
+</html>

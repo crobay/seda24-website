@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns – SEDA24 Reinigungsservice Gaggenau</title>
+    <meta name="description" content="Lernen Sie das Team von SEDA24 kennen. Seit über 14 Jahren Ihr zuverlässiger Partner für professionelle Reinigungsdienstleistungen in Gaggenau, Rastatt und Baden-Baden.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    /* Team Image Fix */
+    .team-card .team-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .team-card .team-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border: none;
+    }
+    
+    /* Floating Action Buttons */
+    .floating-actions {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+    }
+    .fab {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+    .fab:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+        color: white;
+        text-decoration: none;
+    }
+    .fab--phone { background: #F9B233; }
+    .fab--phone:hover { background: #e6a42e; }
+    .fab--whatsapp { background: #25D366; }
+    .fab--whatsapp:hover { background: #20b95a; }
+    .fab--callback { background: #1E537C; }
+    .fab--callback:hover { background: #164261; }
+    @media (max-width: 768px) {
+        .floating-actions { right: 15px; bottom: 15px; gap: 12px; }
+        .fab { width: 50px; height: 50px; font-size: 20px; }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header Include -->
+    <div id="header"></div>
+
+    <!-- Rabatt Banner -->
+    <div id="rabatt-banner"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="hero-content-about">
+                    <div class="hero-text-about">
+                        <h1>SEDA24 – Reinigung mit Verantwortung</h1>
+                        <p class="hero-subtitle">Seit über 15 Jahren sorgen wir mit Leidenschaft für Sauberkeit, Zuverlässigkeit und echte Nähe zum Kunden – Tag für Tag. Denn Qualität beginnt mit Vertrauen und lebt durch Menschen, die ihren Beruf mit Stolz ausüben.</p>
+                        <a href="#contact" class="btn btn--primary">Jetzt Kontakt aufnehmen</a>
+                    </div>
+                    <div class="hero-image-about">
+                        <div>
+                            <img 
+                                src="assets/img/teamfoto-seda24-header.jpg" 
+                                srcset="assets/img/teamfoto-seda24-header.jpg 1440w, assets/img/teamfoto-seda24-header.jpg 1024w, assets/img/teamfoto-seda24-header.jpg 768w, assets/img/teamfoto-seda24-header.jpg 480w"
+                                sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, 1440px"
+                                alt="SEDA24 Führungsteam Drazen und Ruzica Sertic"
+                                style="object-fit: cover; width: 100%; height: auto; display: block;"
+                            />
+                            <p style="font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin-top: 12px; line-height: 1.4; padding: 0 10px;">Aufgenommen im Mai 2025 nach einer gemeinsamen<br>Fensterreinigung-Session in Baden-Baden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Banner -->
+        <div id="quick-contact"></div>
+
+        <!-- Facts Section -->
+        <section class="facts-section">
+            <div class="container">
+                <div class="facts-grid">
+                    <div class="fact-card">
+                        <div class="fact-number" data-target="232">0</div>
+                        <div class="fact-label">Zufriedene Kunden</div>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-number" data-target="15">0</div>
+                        <div class="fact-label">Jahre Erfahrung</div>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-number" data-target="10">0</div>
+                        <div class="fact-label">Mio. € Haftpflichtversicherung</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section class="who-we-are">
+            <div class="container">
+                <div class="content-split">
+                    <div class="content-text">
+                        <h2>Wer wir sind</h2>
+                        <p>
+                            Seit 2010 steht SEDA24 für professionelle Gebäudereinigung mit persönlichem Anspruch.
+                            Als Familienbetrieb aus Gaggenau verbinden wir Qualität, Verlässlichkeit und ehrliche Kommunikation.
+                            Ob Büro, Praxis, Flur oder Fenster – wir sorgen für saubere Lösungen.
+                        </p>
+                        <p>
+                            Wir sind keine Aktiengesellschaft, sondern ein Familienbetrieb, der für langfristige Qualität steht.
+                            Unsere Kunden sind keine Nummern – wir kennen jedes Objekt persönlich.
+                            Unsere Mitarbeitenden erhalten faire, übertarifliche Bezahlung und sorgen mit echter Motivation für zufriedene Kunden.
+                        </p>
+                        <p>
+                            Als inhabergeführtes Unternehmen sind wir keine Franchise-Kette und keine anonyme Aktiengesellschaft. Bei uns steht der Mensch im Mittelpunkt – sowohl als Kunde als auch als Mitarbeiter.
+                            Unsere Reinigungskräfte erhalten übertarifliche Bezahlung und faire Arbeitsbedingungen – weil echte Motivation aus Wertschätzung entsteht.
+                        </p>
+                    </div>
+                    <div class="content-image">
+                        <img 
+                            src="assets/img/teamfoto-seda24-zeitung.jpg" 
+                            srcset="assets/img/teamfoto-seda24-zeitung.jpg 1440w, assets/img/teamfoto-seda24-zeitung.jpg 1024w, assets/img/teamfoto-seda24-zeitung.jpg 768w, assets/img/teamfoto-seda24-zeitung.jpg 480w"
+                            sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, 1440px"
+                            alt="Ruzica und Drazen Sertic im Gespräch"
+                            style="object-fit: cover; width: 100%; height: auto; display: block;"
+                            loading="lazy"
+                        />
+                        <p style="font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin-top: 12px; line-height: 1.4;">v.l.n.r.: Ruzica Sertic, Drazen Sertic, Ljubica Spasic und Senad Mesic</p>
+                        <p style="font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin-top: 8px; line-height: 1.4;">Foto von Hausfotografen der Badischen Zeitung – entstanden im Rahmen eines Berichts über SEDA24 im Wochenblatt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team Section -->
+        <section class="leadership-section">
+            <div class="container">
+                <h2 class="section-title">Unser Führungsteam</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img 
+                                src="assets/img/Seda24_Drazen-Sertic.jpg" 
+                                srcset="assets/img/Seda24_Drazen-Sertic.jpg 1440w, assets/img/Seda24_Drazen-Sertic.jpg 1024w, assets/img/Seda24_Drazen-Sertic.jpg 768w, assets/img/Seda24_Drazen-Sertic.jpg 480w"
+                                sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, 1440px"
+                                alt="Drazen Sertic, Geschäftsführer SEDA24"
+                                style="object-fit: cover; width: 100%; height: auto; display: block;"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-info">
+                            <h3>Drazen Sertic</h3>
+                            <p class="team-role">Geschäftsführer</p>
+                            <p class="team-quote">"Ich kenne jedes Objekt persönlich – Qualität beginnt beim Chef."</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="assets/img/Seda24-_RuzicaSertic.jpg" alt="Ruzica Sertic, Objektleiterin SEDA24" />
+                        </div>
+                        <div class="team-info">
+                            <h3>Ruzica Sertic</h3>
+                            <p class="team-role">Objektleiterin</p>
+                            <p class="team-quote">"Ich begleite unsere Reinigungskräfte und sorge vor Ort für reibungslose Abläufe."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Unsere Werte</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Verlässlichkeit</h3>
+                        <p>Wir halten, was wir versprechen.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Qualität vor Tempo</h3>
+                        <p>Gründlich statt hektisch.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Nachhaltigkeit</h3>
+                        <p>Umweltfreundliche Mittel & kurze Wege.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why SEDA24 Section -->
+        <section class="why-seda24">
+            <div class="container">
+                <div class="why-content">
+                    <div class="why-image">
+                        <img src="assets/img/seda24-team.jpg" alt="SEDA24 Reinigungsteam bei der Arbeit" />
+                    </div>
+                    <div class="why-text">
+                        <h2>Was uns auszeichnet</h2>
+                        <p>
+                            Wir sind kein Franchise. Kein Billiganbieter.<br>
+                            Sondern ein Team aus Profis, das für seine Kunden da ist – persönlich, erreichbar, zuverlässlich.<br>
+                            Mit klaren Abläufen, transparenter Preisstruktur und echten Ansprechpartnern vor Ort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 style="color: #F9B233 !important;">Lernen Sie uns persönlich kennen</h2>
+                    <p>Kein Callcenter, kein Verkaufsteam – sondern echte Menschen, die zuhören, verstehen und für Sie da sind.<br>
+                    Vereinbaren Sie jetzt einen Termin oder rufen Sie uns an – wir freuen uns auf Sie.</p>
+                    <div class="cta-buttons">
+                        <a href="#" data-form="beratung" class="btn btn--primary">Persönliche Beratung</a>
+                        <a href="#" data-form="kontakt" class="btn btn--secondary-enhanced">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quick Contact Icons - Fixed -->
+    <div style="position: fixed; right: 20px; bottom: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 15px;">
+        <a href="tel:072251804970" style="width: 56px; height: 56px; border-radius: 50%; background: #1E537C; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-size: 22px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;" title="Jetzt anrufen">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/4915145545353" target="_blank" style="width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-size: 22px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;" title="WhatsApp">
+            <img src="assets/img/whatsapp-icon.svg" style="width: 24px; height: 24px;" alt="WhatsApp">
+        </a>
+        <a href="rueckruf-formular.html" style="width: 56px; height: 56px; border-radius: 50%; background: #F9B233; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-size: 22px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;" title="Rückruf-Termin">
+            <i class="fas fa-calendar-check"></i>
+        </a>
+    </div>
+
+    <!-- Footer Include -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script>
+        // Initialize page components
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load includes
+            loadIncludes();
+            
+            // Load rabatt banner manually
+            fetch('rabatt-banner.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('rabatt-banner').innerHTML = html;
+                })
+                .catch(error => console.log('Banner loading skipped'));
+            
+            // Initialize mobile navigation
+            if (typeof initMobileNavigation === 'function') {
+                initMobileNavigation();
+            }
+
+            // Initialize counter animation manually
+            const counters = document.querySelectorAll('.fact-number[data-target]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + (target === 10 || target === 232 ? '' : '+');
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + (target === 10 || target === 232 ? '' : '+');
+                    }
+                }, 30);
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init('K1qlkK03HzkDwdKEq');
+            }
+        });
+    </script>
+</body>
+</html>

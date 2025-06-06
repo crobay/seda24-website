@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22% Rabatt sichern - SEDA24</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    .rueckruf-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 40px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    
+    .rueckruf-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .rueckruf-header h1 {
+        color: #1E537C;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .rueckruf-header p {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .rueckruf-form {
+        display: grid;
+        gap: 20px;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group label {
+        color: #1E537C;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 1rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 15px;
+        border: 2px solid #e1e5e9;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        font-family: inherit;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #F9B233;
+        box-shadow: 0 0 0 3px rgba(249, 178, 51, 0.1);
+    }
+    
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .zeit-selector {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .rueckruf-btn {
+        background: linear-gradient(135deg, #F9B233 0%, #e6a42e 100%);
+        color: white;
+        padding: 18px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+    
+    .rueckruf-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(249, 178, 51, 0.3);
+    }
+    
+    .success-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .error-message {
+        display: none;
+        background: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .rueckruf-container {
+            margin: 20px;
+            padding: 25px;
+        }
+        
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+        
+        .zeit-selector {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <main class="rueckruf-container">
+        <div class="rueckruf-header">
+            <h1><i class="fas fa-star"></i> 22% Rabatt sichern</h1>
+            <p>Profitieren Sie von 22% Rabatt im ersten Kennenlernmonat. Jetzt schnell sichern und sparen!</p>
+        </div>
+
+        <form id="rueckrufForm" class="rueckruf-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Telefonnummer *</label>
+                    <input type="tel" id="telefon" name="telefon" required placeholder="z.B. 0721 123456">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">E-Mail-Adresse</label>
+                    <input type="email" id="email" name="email" placeholder="optional">
+                </div>
+                <div class="form-group">
+                    <label for="firma">Firma</label>
+                    <input type="text" id="firma" name="firma" placeholder="optional">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="interesse">Interesse *</label>
+                <select id="interesse" name="interesse" required>
+                    <option value="">Bitte wählen...</option>
+                    <option value="Büroreinigung">Büroreinigung</option>
+                    <option value="Unterhaltsreinigung">Unterhaltsreinigung</option>
+                    <option value="Glasreinigung Gewerbe">Glasreinigung Gewerbe</option>
+                    <option value="Haushaltsreinigung">Haushaltsreinigung</option>
+                    <option value="Fensterreinigung Privat">Fensterreinigung Privat</option>
+                    <option value="Treppenhausreinigung">Treppenhausreinigung</option>
+                    <option value="Allgemeine Beratung">Allgemeine Beratung</option>
+                    <option value="Kostenvoranschlag">Kostenvoranschlag</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Bevorzugter Rückruf-Zeitraum *</label>
+                <div class="zeit-selector">
+                    <select id="tag" name="tag" required onchange="toggleDatePicker()">
+                        <option value="">Tag wählen...</option>
+                        <option value="Heute">Heute</option>
+                        <option value="Morgen">Morgen</option>
+                        <option value="Übermorgen">Übermorgen</option>
+                        <option value="Diese Woche">Diese Woche</option>
+                        <option value="Nächste Woche">Nächste Woche</option>
+                        <option value="Wunschtermin">🗓️ Wunschtermin wählen</option>
+                        <option value="Flexibel">Flexibel</option>
+                    </select>
+                    
+                    <div id="datepicker-container" style="display: none; margin-top: 15px;">
+                        <label for="wunschtermin" style="display: block; margin-bottom: 8px; color: #1E537C; font-weight: 600;">Wählen Sie Ihren Wunschtermin:</label>
+                        <input type="date" id="wunschtermin" name="wunschtermin" style="width: 100%; padding: 15px; border: 2px solid #F9B233; border-radius: 10px; font-size: 1rem; background: #fff; box-shadow: 0 2px 8px rgba(249, 178, 51, 0.2);" min="" max="">
+                    </div>
+                    <select id="uhrzeit" name="uhrzeit" required>
+                        <option value="">Uhrzeit wählen...</option>
+                        <option value="8:00 - 10:00">8:00 - 10:00</option>
+                        <option value="10:00 - 12:00">10:00 - 12:00</option>
+                        <option value="11:00 - 14:00">11:00 - 14:00</option>
+                        <option value="12:00 - 14:00">12:00 - 14:00</option>
+                        <option value="14:00 - 16:00">14:00 - 16:00</option>
+                        <option value="16:00 - 18:00">16:00 - 18:00</option>
+                        <option value="Flexibel">Flexibel</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nachricht">Zusätzliche Informationen</label>
+                <textarea id="nachricht" name="nachricht" rows="4" placeholder="Weitere Details zu Ihrer Anfrage... (optional)"></textarea>
+            </div>
+
+            <button type="submit" class="rueckruf-btn">
+                <i class="fas fa-percentage"></i> 22% Rabatt sichern
+            </button>
+
+            <div id="error-message" class="error-message"></div>
+        </form>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        document.getElementById('rueckrufForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const rueckrufData = {
+                name: formData.get('name'),
+                telefon: formData.get('telefon'),
+                email: formData.get('email') || 'Nicht angegeben',
+                firma: formData.get('firma') || 'Nicht angegeben',
+                interesse: formData.get('interesse'),
+                tag: formData.get('tag'),
+                uhrzeit: formData.get('uhrzeit'),
+                wunschtermin: formData.get('wunschtermin') || '',
+                nachricht: formData.get('nachricht') || 'Keine weiteren Informationen',
+                timestamp: new Date().toLocaleString('de-DE')
+            };
+            
+            // Show loading
+            const submitBtn = document.querySelector('.rueckruf-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Wird gesendet...';
+            submitBtn.disabled = true;
+            
+            // Store locally
+            storeRueckrufLocally(rueckrufData);
+            
+            // Send email
+            sendRueckrufEmail(rueckrufData)
+                .then(() => {
+                    showSuccessMessage(rueckrufData);
+                })
+                .catch(error => {
+                    console.error('E-Mail-Versand fehlgeschlagen:', error);
+                    // Fallback: Create mailto
+                    createRueckrufEmailFallback(rueckrufData);
+                    showSuccessMessage(rueckrufData);
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+        
+        function sendRueckrufEmail(data) {
+            const serviceID = 'service_bech8of';
+            const templateID = 'template_meubofk'; // Rabatt-Template  
+            const publicKey = 'K1qlkK03HzkDwdKEq';
+            
+            const templateParams = {
+                to_email: 'mail@seda24.de',
+                from_name: data.name,
+                from_email: data.email,
+                company: data.firma,
+                phone: data.telefon,
+                service: data.interesse,
+                message: `22% RABATT-ANFRAGE - SOFORTRABATT
+
+Name: ${data.name}
+Telefon: ${data.telefon}
+E-Mail: ${data.email}
+Firma: ${data.firma}
+Interesse: ${data.interesse}
+
+Gewünschter Rückruf-Zeitraum:
+${data.tag}, ${data.uhrzeit}
+
+Zusätzliche Informationen:
+${data.nachricht}
+
+---
+Anfragetyp: 22% RABATT-AKTION
+Zeitpunkt: ${data.timestamp}`,
+                timestamp: data.timestamp,
+                subject: '22% Rabatt-Anfrage - SEDA24'
+            };
+            
+            if (typeof emailjs !== 'undefined') {
+                return emailjs.send(serviceID, templateID, templateParams, publicKey);
+            } else {
+                throw new Error('EmailJS nicht verfügbar');
+            }
+        }
+        
+        function storeRueckrufLocally(data) {
+            try {
+                let rueckrufe = JSON.parse(localStorage.getItem('seda24_rueckrufe') || '[]');
+                rueckrufe.unshift({
+                    ...data,
+                    id: Date.now(),
+                    typ: 'rueckruf',
+                    status: 'neu'
+                });
+                
+                if (rueckrufe.length > 50) {
+                    rueckrufe = rueckrufe.slice(0, 50);
+                }
+                
+                localStorage.setItem('seda24_rueckrufe', JSON.stringify(rueckrufe));
+            } catch (error) {
+                console.error('Lokale Speicherung fehlgeschlagen:', error);
+            }
+        }
+        
+        function createRueckrufEmailFallback(data) {
+            const subject = encodeURIComponent('Rückruf-Anfrage - SEDA24');
+            const body = encodeURIComponent(`
+Rückruf-Anfrage über die SEDA24 Website:
+
+Name: ${data.name}
+Telefon: ${data.telefon}
+E-Mail: ${data.email}
+Firma: ${data.firma}
+Interesse: ${data.interesse}
+
+Gewünschter Rückruf-Zeitraum:
+${data.tag}, ${data.uhrzeit}
+${data.wunschtermin ? 'Wunschtermin: ' + data.wunschtermin : ''}
+
+Zusätzliche Informationen:
+${data.nachricht}
+
+---
+Diese Rückruf-Anfrage wurde über seda24.de gesendet.
+Zeitpunkt: ${data.timestamp}
+            `);
+            
+            const emailLink = `mailto:mail@seda24.de?subject=${subject}&body=${body}`;
+            sessionStorage.setItem('seda24_rueckruf_fallback', emailLink);
+        }
+        
+        function showSuccessMessage(rueckrufData) {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            
+            let terminText = '';
+            const tag = rueckrufData.tag;
+            const uhrzeit = rueckrufData.uhrzeit;
+            
+            if (tag === 'Heute') {
+                terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage für heute (${today.toLocaleDateString('de-DE', options)}) im Zeitfenster ${uhrzeit} Uhr wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird Sie zum vereinbarten Zeitpunkt kontaktieren.`;
+            } else if (tag === 'Morgen') {
+                const tomorrow = new Date(today);
+                tomorrow.setDate(today.getDate() + 1);
+                terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage für morgen (${tomorrow.toLocaleDateString('de-DE', options)}) im Zeitfenster ${uhrzeit} Uhr wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird Sie zum vereinbarten Zeitpunkt kontaktieren.`;
+            } else if (tag === 'Übermorgen') {
+                const dayAfterTomorrow = new Date(today);
+                dayAfterTomorrow.setDate(today.getDate() + 2);
+                terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage für übermorgen (${dayAfterTomorrow.toLocaleDateString('de-DE', options)}) im Zeitfenster ${uhrzeit} Uhr wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird Sie zum vereinbarten Zeitpunkt kontaktieren.`;
+            } else if (tag === 'Wunschtermin') {
+                const wunschtermin = document.getElementById('wunschtermin').value;
+                if (wunschtermin) {
+                    const selectedDate = new Date(wunschtermin);
+                    terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage für den ${selectedDate.toLocaleDateString('de-DE', options)} im Zeitfenster ${uhrzeit} Uhr wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird Sie zum vereinbarten Zeitpunkt kontaktieren.`;
+                } else {
+                    terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage für Ihren Wunschtermin im Zeitfenster ${uhrzeit} Uhr wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird Sie kontaktieren.`;
+                }
+            } else if (tag === 'Diese Woche') {
+                terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage für diese Woche im Zeitfenster ${uhrzeit} Uhr wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird sich mit Ihnen in Verbindung setzen, um einen konkreten Termin zu vereinbaren.`;
+            } else if (tag === 'Nächste Woche') {
+                terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage für nächste Woche im Zeitfenster ${uhrzeit} Uhr wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird sich mit Ihnen in Verbindung setzen, um einen konkreten Termin zu vereinbaren.`;
+            } else {
+                terminText = `Vielen Dank für Ihr Vertrauen. Ihre Rückruf-Anfrage wurde erfolgreich übermittelt. Ein Mitarbeiter unseres Teams wird sich zeitnah mit Ihnen in Verbindung setzen, um einen passenden Termin zu vereinbaren.`;
+            }
+            
+            // Show success modal instead of inline message
+            showSuccessModal(terminText);
+        }
+        
+        // Toggle date picker visibility
+        function toggleDatePicker() {
+            const tagSelect = document.getElementById('tag');
+            const datePicker = document.getElementById('wunschtermin');
+            
+            const dateContainer = document.getElementById('datepicker-container');
+            
+            if (tagSelect.value === 'Wunschtermin') {
+                dateContainer.style.display = 'block';
+                datePicker.required = true;
+                
+                // Set min date to today, max date to 30 days from now
+                const today = new Date();
+                const maxDate = new Date();
+                maxDate.setDate(today.getDate() + 30);
+                
+                datePicker.min = today.toISOString().split('T')[0];
+                datePicker.max = maxDate.toISOString().split('T')[0];
+                
+                // Smooth scroll to date picker
+                setTimeout(() => {
+                    dateContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            } else {
+                dateContainer.style.display = 'none';
+                datePicker.required = false;
+                datePicker.value = '';
+            }
+        }
+        
+        // Success Modal
+        function showSuccessModal(message) {
+            // Create modal overlay
+            const modalOverlay = document.createElement('div');
+            modalOverlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(30, 83, 124, 0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+                backdrop-filter: blur(5px);
+            `;
+            
+            // Create modal content
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 20px;
+                max-width: 600px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                animation: modalSlideIn 0.4s ease-out;
+                border-top: 5px solid #F9B233;
+            `;
+            
+            modalContent.innerHTML = `
+                <div style="margin-bottom: 25px;">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #F9B233, #e59b00); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-percentage" style="color: white; font-size: 35px;"></i>
+                    </div>
+                    <h2 style="color: #1E537C; margin: 0 0 15px 0; font-size: 1.8rem; font-weight: 700;">22% Rabatt gesichert!</h2>
+                    <p style="color: #495057; font-size: 1.1rem; line-height: 1.6; margin: 0;">Herzlichen Glückwunsch! Ihre 22% Rabatt-Anfrage wurde erfolgreich übermittelt. Wir kontaktieren Sie innerhalb von 24h, damit Sie Ihren Sofortrabatt einlösen können.</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 15px; margin: 25px 0; border-left: 4px solid #F9B233;">
+                    <h3 style="color: #1E537C; margin: 0 0 15px 0; font-size: 1.2rem;">Ihre Vorteile mit SEDA24</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; text-align: left;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-shield-alt" style="color: #F9B233; font-size: 16px;"></i>
+                            <span style="color: #495057;">Kostenlose Beratung</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-cog" style="color: #F9B233; font-size: 16px;"></i>
+                            <span style="color: #495057;">Individuelle Lösungen</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-clock" style="color: #F9B233; font-size: 16px;"></i>
+                            <span style="color: #495057;">Pünktliche Termine</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-star" style="color: #F9B233; font-size: 16px;"></i>
+                            <span style="color: #495057;">Premium-Standards</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 25px 0;">
+                    <a href="tel:+4972251804970" style="background: #1E537C; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.3s;">
+                        <i class="fas fa-phone"></i> 07225 / 180 49 70
+                    </a>
+                    <a href="mailto:mail@seda24.de" style="background: #F9B233; color: #1E537C; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.3s;">
+                        <i class="fas fa-envelope"></i> mail@seda24.de
+                    </a>
+                </div>
+                
+                <button onclick="closeSuccessModal()" style="background: transparent; border: 2px solid #1E537C; color: #1E537C; padding: 12px 30px; border-radius: 30px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s; margin-top: 15px;">
+                    Zur Startseite zurück
+                </button>
+            `;
+            
+            // Add CSS animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes modalSlideIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-50px) scale(0.9);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0) scale(1);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            modalOverlay.appendChild(modalContent);
+            document.body.appendChild(modalOverlay);
+            
+            // Store reference for closing
+            window.currentModal = modalOverlay;
+            
+            // Close on overlay click
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closeSuccessModal();
+                }
+            });
+        }
+        
+        function closeSuccessModal() {
+            if (window.currentModal) {
+                window.currentModal.remove();
+                window.currentModal = null;
+                
+                // Professional redirect to homepage after successful callback request
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>

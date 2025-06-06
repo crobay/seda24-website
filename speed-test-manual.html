@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDA24 Speed Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f8f9fa; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; }
+        .score { font-size: 3rem; font-weight: bold; text-align: center; margin: 20px 0; }
+        .excellent { color: #28a745; }
+        .good { color: #ffc107; }
+        .poor { color: #dc3545; }
+        .metric { padding: 15px; margin: 10px 0; border-left: 4px solid #1E537C; background: #f8f9fa; }
+        .test-btn { background: #1E537C; color: white; padding: 15px 30px; border: none; border-radius: 25px; cursor: pointer; margin: 10px; }
+        .results { margin-top: 30px; }
+        .loading { text-align: center; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SEDA24 Performance Test</h1>
+        
+        <div class="test-controls">
+            <button class="test-btn" onclick="runPerformanceTest()">🚀 Performance Test starten</button>
+            <button class="test-btn" onclick="testCaching()">📦 Cache Test</button>
+            <button class="test-btn" onclick="openPageSpeedInsights()">🔍 Google PageSpeed öffnen</button>
+        </div>
+
+        <div id="results" class="results">
+            <div class="loading">Klicken Sie auf einen Test-Button um zu starten...</div>
+        </div>
+    </div>
+
+    <script>
+        function runPerformanceTest() {
+            document.getElementById('results').innerHTML = '<div class="loading">⏳ Teste Performance...</div>';
+            
+            setTimeout(() => {
+                const performanceData = measureCurrentPage();
+                displayResults(performanceData);
+            }, 1000);
+        }
+
+        function measureCurrentPage() {
+            const navigation = performance.getEntriesByType('navigation')[0];
+            const paint = performance.getEntriesByType('paint');
+            
+            return {
+                domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.navigationStart),
+                loadComplete: Math.round(navigation.loadEventEnd - navigation.navigationStart),
+                firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+                firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+                transferSize: Math.round(navigation.transferSize / 1024),
+                resourceCount: performance.getEntriesByType('resource').length
+            };
+        }
+
+        function displayResults(data) {
+            let score = 100;
+            if (data.loadComplete > 3000) score -= 20;
+            if (data.loadComplete > 5000) score -= 30;
+            if (data.transferSize > 1000) score -= 15;
+            
+            const scoreClass = score >= 90 ? 'excellent' : score >= 70 ? 'good' : 'poor';
+            
+            document.getElementById('results').innerHTML = `
+                <div class="score ${scoreClass}">${score}/100</div>
+                
+                <div class="metric">
+                    <strong>DOM Content Loaded:</strong> ${data.domContentLoaded}ms
+                    ${data.domContentLoaded < 1500 ? '✅' : '⚠️'}
+                </div>
+                
+                <div class="metric">
+                    <strong>Seite komplett geladen:</strong> ${data.loadComplete}ms
+                    ${data.loadComplete < 3000 ? '✅' : '⚠️'}
+                </div>
+                
+                <div class="metric">
+                    <strong>First Contentful Paint:</strong> ${Math.round(data.firstContentfulPaint)}ms
+                    ${data.firstContentfulPaint < 2000 ? '✅' : '⚠️'}
+                </div>
+                
+                <div class="metric">
+                    <strong>Übertragungsgröße:</strong> ${data.transferSize} KB
+                    ${data.transferSize < 500 ? '✅' : '⚠️'}
+                </div>
+                
+                <div class="metric">
+                    <strong>Geladene Ressourcen:</strong> ${data.resourceCount}
+                    ${data.resourceCount < 30 ? '✅' : '⚠️'}
+                </div>
+            `;
+        }
+
+        function testCaching() {
+            document.getElementById('results').innerHTML = '<div class="loading">📦 Teste Caching...</div>';
+            
+            setTimeout(() => {
+                const cacheData = testCacheStatus();
+                displayCacheResults(cacheData);
+            }, 500);
+        }
+
+        function testCacheStatus() {
+            const resources = performance.getEntriesByType('resource');
+            let cached = 0;
+            let network = 0;
+            
+            resources.forEach(resource => {
+                if (resource.transferSize === 0 && resource.decodedBodySize > 0) {
+                    cached++;
+                } else {
+                    network++;
+                }
+            });
+            
+            return {
+                cached,
+                network,
+                cacheRatio: Math.round((cached / (cached + network)) * 100),
+                serviceWorkerActive: 'serviceWorker' in navigator && navigator.serviceWorker.controller !== null
+            };
+        }
+
+        function displayCacheResults(data) {
+            document.getElementById('results').innerHTML = `
+                <h3>📦 Cache Status</h3>
+                
+                <div class="metric">
+                    <strong>Service Worker:</strong> ${data.serviceWorkerActive ? '✅ Aktiv' : '❌ Nicht aktiv'}
+                </div>
+                
+                <div class="metric">
+                    <strong>Aus Cache geladen:</strong> ${data.cached} Ressourcen
+                </div>
+                
+                <div class="metric">
+                    <strong>Vom Netzwerk geladen:</strong> ${data.network} Ressourcen
+                </div>
+                
+                <div class="metric">
+                    <strong>Cache-Quote:</strong> ${data.cacheRatio}%
+                    ${data.cacheRatio > 50 ? '✅' : '⚠️'}
+                </div>
+                
+                <p><strong>Empfehlung:</strong> ${data.cacheRatio > 70 ? 
+                    'Excellent! Cache funktioniert optimal.' : 
+                    'Cache kann verbessert werden. Service Worker prüfen.'}</p>
+            `;
+        }
+
+        function openPageSpeedInsights() {
+            const url = window.location.href.split('/speed-test-manual.html')[0];
+            const pageSpeedUrl = `https://pagespeed.web.dev/report?url=${encodeURIComponent(url)}&form_factor=mobile`;
+            window.open(pageSpeedUrl, '_blank');
+        }
+
+        // Auto-Test beim Laden
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                runPerformanceTest();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

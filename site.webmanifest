@@ -1,0 +1,22 @@
+{
+    "name": "SEDA24 Reinigungsservice Gaggenau",
+    "short_name": "SEDA24",
+    "description": "Premium Reinigungsservice für Gewerbe & Privat in Gaggenau, Baden-Baden, Rastatt",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1E537C",
+    "theme_color": "#F9B233",
+    "icons": [
+        {
+            "src": "assets/img/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/favicon.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
+        }
+    ]
+}

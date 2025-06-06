@@ -1,0 +1,105 @@
+<!-- Angebots-Banner -->
+<div class="angebot-banner">
+    <div class="angebot-banner__container">
+        <div class="angebot-banner__content">
+            <span class="angebot-banner__emoji">🎉</span>
+            <span class="angebot-banner__text">
+                <strong>22% Sofortrabatt</strong> im Kennenlernmonat – Jetzt kostenlos anfragen!
+            </span>
+            <a href="index.html#contact" class="angebot-banner__btn">
+                Jetzt anfragen
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.angebot-banner {
+    background: linear-gradient(135deg, #F9B233 0%, #e6a42e 100%);
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 50;
+}
+
+.angebot-banner.hide {
+    display: none;
+}
+
+.angebot-banner__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.angebot-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.angebot-banner__emoji {
+    font-size: 1.2rem;
+    animation: bounce 2s infinite;
+}
+
+.angebot-banner__text {
+    color: #1E537C;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.angebot-banner__btn {
+    background: #1E537C;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.angebot-banner__btn:hover {
+    background: #164261;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(30, 83, 124, 0.3);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+@media (max-width: 768px) {
+    .angebot-banner__content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .angebot-banner__text {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .angebot-banner__btn {
+        font-size: 0.85rem;
+        padding: 6px 14px;
+    }
+}
+</style>
